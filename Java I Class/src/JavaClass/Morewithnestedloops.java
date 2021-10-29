@@ -37,7 +37,7 @@ public class Morewithnestedloops {
             for (int j = 1; j <= 2 * j - 1; j++) {
                 System.out.print("*");                
             }
-            System.out.println("");
+            System.out.println();
         }
         space = 1;
         for (int i = 1; i <= x - 1; i++) {
@@ -48,7 +48,7 @@ public class Morewithnestedloops {
             for (int j = 1; j <= 2 * (x - j) - 1; j++) {
                 System.out.print("*");
             }
-            System.out.println("");
+            System.out.println();
         }
 	}
 	public static void main(String[] args) {
