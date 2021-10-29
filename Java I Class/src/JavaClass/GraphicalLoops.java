@@ -13,7 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class LoopGraphicsFiller extends JPanel {
+public class GraphicalLoops extends JPanel {
 	
 	// constants that are predefined and won't change as the program runs
 	private final int WIDTH = 1000, HEIGHT = 590;
@@ -125,7 +125,7 @@ public class LoopGraphicsFiller extends JPanel {
 	// does complicated stuff to initialize the graphics and key listeners
 	// DO NOT CHANGE THIS CODE UNLESS YOU ARE EXPERIENCED WITH JAVA
 	// GRAPHICS!
-	public LoopGraphicsFiller() {
+	public GraphicalLoops() {
 		JFrame frame = new JFrame();
 		frame.setSize(WIDTH, HEIGHT);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
