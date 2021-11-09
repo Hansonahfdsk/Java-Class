@@ -56,6 +56,6 @@ public class arrays {
 //		tester.oneToN(5);
 //		tester.swap(new int[] {1, 2, 3, 4});
 //		tester.userarray(5);
-		tester.reverse(new int[] {1, 2, 3, 4});
+//		tester.reverse(new int[] {1, 2, 3, 4});
 	}
 }
