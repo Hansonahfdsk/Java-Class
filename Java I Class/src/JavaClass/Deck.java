@@ -20,4 +20,30 @@ public class Deck {
 	public Card getRandom() {
 		return deck[(int)(Math.random()*52)];
 	}
+	public Card[] getFirstN(int n) {
+		Card[] c;
+		for (int i = 0; i < n; i++) {
+			c[i] = deck[i];
+		}
+		return c;
+	}
+	public void shuffle() {
+		for (int i = 0; i < deck.length; i++) {
+		    int j = (int)(Math.random() * 52);
+		    Card temp = deck[i];
+		    deck[i] = deck[j];
+		    deck[j] = temp;
+		}
+	}
+	public void sort() {
+        for (int i = 0; i < deck.length; i++) {
+            for (int j = i + 1; j < deck.length; j++) {
+                if (i != j && deck[j].num < deck[i].num) {
+                    Card temp = deck[j];
+                    deck[j] = deck[i];
+                    deck[i] = temp;
+                }
+            }
+        }
+	}
 }
