@@ -3,21 +3,19 @@ package JavaClass;
 public class BankAccount {
 	private String name;
 	private int money;
-	private double interest;
+	private double interest
 	public class Account {
 		private String name;
 		private int money;
-		private double interest;
 	}
-	public BankAccount(String name, int money, double interest) {
+	public BankAccount(String name, int money) {
 		this.name = name;
 		this.money = money;
-		this.interest = interest;
 	}
 	public BankAccount(String name, double interest) {
 		this.name = name;
-		this.interest = interest;
 		money = 0;
+		this.interest = interest;
 	}
 	public void deposit(int n) {
 		money += n;
