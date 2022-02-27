@@ -1,11 +1,16 @@
 package JavaClass;
 
 public class Tests {
-	private String tester;
-	private int score;
-	private int percentile;
-	private String clas;
+	public String name;
+	public int score;
+	public int percentile;
 	public String toString() {
-		return "Class: " + clas + " " + score + " " + percentile;
+		return "Name: " + name + "Score: " + score + " " + percentile;
+	}
+	public int getScore() {
+		return score;
+	}
+	public void setScore(int newScore) {
+		score = newScore;
 	}
 }
