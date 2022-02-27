@@ -1,5 +1,5 @@
 package JavaClass;
 
-public class Math {
+public class Physics {
 
 }
