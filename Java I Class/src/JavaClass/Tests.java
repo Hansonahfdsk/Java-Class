@@ -4,8 +4,9 @@ public class Tests {
 	public String name;
 	public int score;
 	public int percentile;
+	public String topic;
 	public String toString() {
-		return "Name: " + name + "Score: " + score + " " + percentile;
+		return "Topic: " + topic + "Name: " + name + "Score: " + score + " " + percentile;
 	}
 	public int getScore() {
 		return score;

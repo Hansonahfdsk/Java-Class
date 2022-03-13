@@ -1,7 +1,7 @@
 package JavaClass;
 
-public class Physics extends Tests{
-	public Physics(String name, int score, int percentile, String topic) {
+public class Mathc extends Tests{
+	public Mathc(String name, int score, int percentile, String topic) {
 		this.name = name;
 		this.score = score;
 		this.percentile = percentile;
