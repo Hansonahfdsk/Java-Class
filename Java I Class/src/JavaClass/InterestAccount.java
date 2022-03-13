@@ -6,7 +6,7 @@ public class InterestAccount extends BankAccount{
 		super(name, money);
 	}
 	public void addInterest() {
-		money += interest * money;
+		super.setMoney(super.getMoney() + interest * super.getMoney());
 	}
 	public static void main(String args[]) {
 	}

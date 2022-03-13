@@ -1,8 +1,8 @@
 package JavaClass;
 
 public class BankAccount {
-	public String name;
-	public int money;
+	private String name;
+	private int money;
 	public BankAccount(String name, int money) {
 		this.name = name;
 		this.money = money;
@@ -19,6 +19,12 @@ public class BankAccount {
 	}
 	public String toString() {
 		return "Money: " + money;
+	}
+	public int getMoney() {
+		return money;
+	}
+	public void setMoney(int n) {
+		money = n;
 	}
 	public static void main(String args[]) {
 		BankAccount a = new BankAccount("a", 100);
