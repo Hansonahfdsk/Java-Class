@@ -1,10 +1,10 @@
 package JavaClass;
 
-public class car {
+public class Car {
 	private String name;
 	private int year;
 	private int mileage;
-	public car(String name, int year, int mileage) {
+	public Car(String name, int year, int mileage) {
 		this.name = name;
 		this.year = year;
 		this.mileage = mileage;
@@ -17,5 +17,8 @@ public class car {
 	}
 	public int getMileage() {
 		return mileage;
+	}
+	public void setMileage(int n) {
+		mileage = n;
 	}
 }

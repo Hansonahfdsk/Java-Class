@@ -1,11 +1,11 @@
 package JavaClass;
 
-public class garage {
-	private car[] car;
-	public garage(int n) {
-		this.car[] = new car[n];
+public class Garage extends Car{
+	private Car[] car;
+	public Garage(Car[] n) {
+		this.car = n;
 	}
-	public int addcar(int i, String name, int year, int mileage) {
+	public void addcar(int i, String name, int year, int mileage) {
 		car[i] = new Car(name, year, mileage);
 	}
 	public int totalWorth() {
@@ -16,13 +16,17 @@ public class garage {
 		return sum;
 	}
 	public int averageMileage() {
-		int avg = 0;
+		int avg = 0, n = 0;
 		for (int i = 0; i < car.length; i++) {
+			if (car[i].getMileage() == 0) {
+				n++;
+				continue;
+			}
 			avg += car[i].getMileage();
 		}
-		return avg / car.length;
+		return avg / (car.length - n);
 	}
 	public void drive(int i, int n) {
-		car[i].mileage += n;
+		car[i].setMileage(car[i].getMileage() + n);
 	}
 }
