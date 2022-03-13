@@ -3,7 +3,7 @@ package JavaClass;
 public class Deck {
 	private Card[] deck;
 	public Deck() {
-		for (int i = 0; i < 13; i++) {
+		for (int i = 1; i <= 13; i++) {
 			deck[i] = new Card("clubs", i);
 			deck[i + 13] = new Card("hearts", i);
 			deck[i + 26] = new Card("diamonds", i);
@@ -21,7 +21,7 @@ public class Deck {
 		return deck[(int)(Math.random()*52)];
 	}
 	public Card[] getFirstN(int n) {
-		Card[] c;
+		Card[] c = new Card[n];
 		for (int i = 0; i < n; i++) {
 			c[i] = deck[i];
 		}
