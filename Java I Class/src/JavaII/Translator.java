@@ -9,29 +9,21 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Translator {
-    private Map<String, String> dictionary;
-    private Scanner s;
-    private void doTranslate() throws IOException {
-        this.dictionary = new HashMap<>();
-        this.s = new Scanner(System.in);
-        wordReader();
+	public static void main(String[]args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        Translator runner = new Translator();
+        HashMap<String, String> dictionary = new HashMap<String, String>();
+        BufferedReader in  = new BufferedReader(new FileReader("EnglishToArabicDictionary.txt"));
+        String FirstLine = in.readLine();
+        String SecondLine = in.readLine();
+        dictionary.put(FirstLine.substring(1), SecondLine);
+        for (String line = in.readLine(); line != null; line = in.readLine()){
+            dictionary.put(line, in.readLine());
+        }
+        in.close();
         while (true) {
-            System.out.println("Input English word: ");
-            String translate = s.nextLine();
-            System.out.println(dictionary.getOrDefault(translate.toLowerCase(), "Not Found"));
+            String a = scanner.nextLine();
+            System.out.println(dictionary.get(a));
         }
     }
-    private void wordReader() throws IOException {
-        FileReader input = new FileReader("EnglishToArabicDictionary.txt");
-        BufferedReader read = new BufferedReader(input);
-        read.readLine();
-        String english, arabic;
-        while((english = read.readLine()) != null) {
-            arabic = read.readLine();
-            dictionary.put(english, arabic);
-        }
-    }
-	public static void main(String[] args) throws IOException {
-		new Translator().doTranslate();
-	}
 }
